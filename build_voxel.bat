@@ -1,0 +1,1 @@
+wasm\node wasm\wajicup.js -embed files/C1W.gif files/C1W.gif -embed files/D1.gif files/D1.gif source/i_voxel.c source/dos.c voxel.html
