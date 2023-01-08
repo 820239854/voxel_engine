@@ -9,6 +9,18 @@
 uint8_t* heightmap = NULL;
 uint8_t* colormap = NULL;
 
+typedef struct
+{
+    float x;
+    float y;
+    float zfar;
+}camera_t;
+
+camera_t camera =
+{
+
+}
+
 int main(int argc, char* args[]) {
     setvideomode(videomode_320x200);
     
@@ -29,11 +41,6 @@ int main(int argc, char* args[]) {
     while (!shuttingdown()) {
         waitvbl();
         clearscreen();
-        
-        int x = 160;
-        int y = 100;
-        
-        framebuffer[SCREEN_WIDTH * y + x] = 0x50;
         
         framebuffer = swapbuffers();
         
